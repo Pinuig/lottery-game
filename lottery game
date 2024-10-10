@@ -1,0 +1,24 @@
+import random
+
+lottery = random.randint(0,99)
+
+guess = eval(input('Enter a value within the range of 0-99: '))
+
+lottery1 = lottery // 10
+lottery2 = lottery % 10
+
+guess1 = guess // 10
+guess2 = guess % 10
+
+if guess == lottery:
+  print('You won $10000')
+
+elif (guess1==lottery1 and guess2==lottery2):
+  print('you won $3000')
+
+elif (lottery1==lottery or guess==lottery2,
+      guess==lottery1 or guess1==lottery):
+  print('you won $1000')
+
+else:
+  print('you loose')
